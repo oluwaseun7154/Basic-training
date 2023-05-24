@@ -1,19 +1,36 @@
 <!---------Introduction----->
-<p>My name is Eniola</p>
+<section>
+<p>Welcome to {{_SITETITLE}}</p>
 <p>I am a programmer</p>
- 
+</section>
+
+<!----------List of Data-------->
 <div>
-    <a href="https://facebook.com" target="_blank">Go to Facebook</a>
+    <h3>List of Data</h3>
+    <ul>
+        <li *ngFor="let item of _ITEMS">{{item.name}} {{item.lastname}}</li>
+    </ul>
 </div>
 
 <div>
-    <a href="https://whatsapp.com" target="_blank">Go to Whatsapp</a>
+    <a href="{{_FACEBOOK}}" target="_blank">Go to Facebook</a>
 </div>
+
+<div>
+    <a href="{{_WHATSAPP}}" target="_blank">Go to Whatsapp</a>
+</div>
+
+
+<div class="button1">
+    <a href="{{_FACEBOOK}}" target="_blank">Go to Facebook</a>
+</div>
+
+<button class="button2"><a href="{{_FACEBOOK}}" target="_blank">Go to Facebook</a></button>
 
 <!--------Image lesson------>
 <section>
 <div class="My-image">
-    <img src="assets/screen.jpg" alt="">
+    <img src="{{_SCREENPHOTO}}" alt="">
 </div>
 </section>
 
@@ -32,7 +49,7 @@
 
 </section>
 
-<img src="assets/bag.jpg" alt="">
+<img src="{{_BAGPHOTO}}" alt="">
 
 <div class="family-div">
     <p>I love my family</p>
